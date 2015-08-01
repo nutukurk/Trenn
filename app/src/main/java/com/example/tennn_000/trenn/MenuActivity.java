@@ -37,12 +37,12 @@ View.OnTouchListener{
         image_button_2 = (ImageView) findViewById(R.id.menu_button_2);
         image_button_3 = (ImageView) findViewById(R.id.menu_button_3);
 
-        image_button_1.setImageDrawable(getResources().getDrawable(R.drawable.combos));
-        image_button_2.setImageDrawable(getResources().getDrawable(R.drawable.create));
+        image_button_1.setImageDrawable(getResources().getDrawable(R.drawable.create));
+        image_button_2.setImageDrawable(getResources().getDrawable(R.drawable.combos));
         image_button_3.setImageDrawable(getResources().getDrawable(R.drawable.options));
 
         menu_background = (ImageView) findViewById(R.id.menu_background);
-        menu_background.setImageDrawable(getResources().getDrawable(R.drawable.menu_background));
+        menu_background.setImageDrawable(getResources().getDrawable(R.drawable.teine_background));
 
         editor = getSharedPreferences(PREFS_NAME, MODE_PRIVATE).edit();
 
@@ -79,7 +79,7 @@ View.OnTouchListener{
     public boolean onTouch(View v, MotionEvent event) {
         if(v.getId() == R.id.menu_button_1){
             if(event.getAction() == MotionEvent.ACTION_UP){
-                image_button_1.setImageDrawable(getResources().getDrawable(R.drawable.combos));
+                image_button_1.setImageDrawable(getResources().getDrawable(R.drawable.create));
                 if (rect != null && !rect.contains(v.getLeft() + (int) event.getX(), v.getTop() + (int) event.getY())) {
                     return true;
                 }
@@ -89,14 +89,14 @@ View.OnTouchListener{
 
             } else if(event.getAction() == MotionEvent.ACTION_DOWN){
                 rect = new Rect(v.getLeft(), v.getTop(), v.getRight(), v.getBottom());
-                image_button_1.setImageDrawable(getResources().getDrawable(R.drawable.combos_pressed));
+                image_button_1.setImageDrawable(getResources().getDrawable(R.drawable.create_pressed));
                 return true;
             }
         }
 
         if(v.getId() == R.id.menu_button_2){
             if(event.getAction() == MotionEvent.ACTION_UP){
-                image_button_2.setImageDrawable(getResources().getDrawable(R.drawable.create));
+                image_button_2.setImageDrawable(getResources().getDrawable(R.drawable.combos));
                 if (rect != null && !rect.contains(v.getLeft() + (int) event.getX(), v.getTop() + (int) event.getY())) {
                     return true;
                 }
@@ -106,7 +106,7 @@ View.OnTouchListener{
 
             } else if(event.getAction() == MotionEvent.ACTION_DOWN){
                 rect = new Rect(v.getLeft(), v.getTop(), v.getRight(), v.getBottom());
-                image_button_2.setImageDrawable(getResources().getDrawable(R.drawable.create_pressed));
+                image_button_2.setImageDrawable(getResources().getDrawable(R.drawable.combos_pressed));
                 return true;
             }
         }

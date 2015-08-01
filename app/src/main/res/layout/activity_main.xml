@@ -1,12 +1,15 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
     android:layout_height="match_parent" >
 
     <ImageView
         android:id="@+id/create_combos_background"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:scaleType="fitXY"/>
+        android:scaleType="fitXY"
+        android:adjustViewBounds="false"
+        android:layout_marginRight="10dp" />
 
 
     <TextView
@@ -20,18 +23,18 @@
         android:id="@+id/button_1"
         android:focusableInTouchMode="false"
         android:background="@drawable/left"
-        android:layout_below="@+id/straightpic"
-        android:layout_toRightOf="@+id/textview_1"
-        android:layout_toEndOf="@+id/textview_1" />
+        android:contentDescription="Left straight"
+        android:layout_marginTop="60dp"
+        android:layout_marginLeft="10dp"/>
 
     <ImageButton
         android:layout_width="50dp"
         android:layout_height="50dp"
         android:id="@+id/button_2"
         android:background="@drawable/right"
-        android:layout_below="@+id/straightpic"
-        android:layout_alignRight="@+id/straightpic"
-        android:layout_alignEnd="@+id/straightpic" />
+        android:layout_marginTop="60dp"
+        android:layout_marginLeft="60dp"/>
+
 
     <ImageView
         android:layout_width="100dp"
@@ -39,25 +42,23 @@
         android:id="@+id/straightpic"
         android:background="@drawable/straight"
         android:focusable="true"
-        android:layout_alignParentTop="true"
-        android:layout_toRightOf="@+id/textview_1"
-        android:layout_toEndOf="@+id/textview_1" />
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"/>
 
     <ImageView
         android:layout_width="100dp"
         android:layout_height="50dp"
         android:id="@+id/hookpic"
         android:background="@drawable/hook"
-        android:layout_alignParentTop="true"
-        android:layout_alignLeft="@+id/straighttobodypic"
-        android:layout_alignStart="@+id/straighttobodypic" />
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"/>
 
     <ImageButton
         android:layout_width="50dp"
         android:layout_height="50dp"
         android:id="@+id/button_3"
         android:background="@drawable/left"
-        android:layout_alignTop="@+id/button_4"
+        android:layout_below="@+id/hookpic"
         android:layout_alignLeft="@+id/hookpic"
         android:layout_alignStart="@+id/hookpic" />
 
@@ -75,9 +76,11 @@
         android:layout_height="50dp"
         android:id="@+id/uppercutpic"
         android:background="@drawable/uppercut"
-        android:layout_alignParentTop="true"
-        android:layout_alignRight="@+id/button_6"
-        android:layout_alignEnd="@+id/button_6" />
+
+        android:layout_marginTop="10dp"
+        android:layout_alignRight="@+id/create_combos_background"
+        android:layout_alignEnd="@+id/create_combos_background" />
+
 
     <ImageButton
         android:layout_width="50dp"
@@ -94,33 +97,32 @@
         android:id="@+id/button_6"
         android:background="@drawable/right"
         android:layout_below="@+id/uppercutpic"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true" />
+        android:layout_toRightOf="@+id/button_5"
+        android:layout_toEndOf="@+id/button_5" />
 
     <ImageView
         android:layout_width="100dp"
         android:layout_height="50dp"
         android:id="@+id/hooktobodypic"
         android:background="@drawable/hooktobody"
-        android:layout_alignTop="@+id/straighttobodypic"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
+        android:layout_marginTop="135dp"
+        android:layout_marginLeft="10dp"/>
 
     <ImageButton
         android:layout_width="50dp"
         android:layout_height="50dp"
         android:id="@+id/button_7"
         android:background="@drawable/left"
-        android:layout_centerVertical="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
+        android:layout_below="@+id/hooktobodypic"
+        android:layout_alignLeft="@+id/hooktobodypic"
+        android:layout_alignStart="@+id/hooktobodypic" />
 
     <ImageButton
         android:layout_width="50dp"
         android:layout_height="50dp"
         android:id="@+id/button_8"
         android:background="@drawable/right"
-        android:layout_alignTop="@+id/button_7"
+        android:layout_below="@+id/hooktobodypic"
         android:layout_toRightOf="@+id/button_7"
         android:layout_toEndOf="@+id/button_7" />
 
@@ -129,9 +131,8 @@
         android:layout_height="50dp"
         android:id="@+id/straighttobodypic"
         android:background="@drawable/straighttobody"
-        android:layout_above="@+id/button_8"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="49dp" />
+        android:layout_marginTop="135dp" />
 
     <ImageButton
         android:layout_width="50dp"
@@ -139,15 +140,15 @@
         android:id="@+id/button_17"
         android:background="@drawable/left"
         android:layout_below="@+id/straighttobodypic"
-        android:layout_toLeftOf="@+id/button_9"
-        android:layout_toStartOf="@+id/button_9" />
+        android:layout_alignLeft="@+id/straighttobodypic"
+        android:layout_alignStart="@+id/straighttobodypic" />
 
     <ImageButton
         android:layout_width="50dp"
         android:layout_height="50dp"
         android:id="@+id/button_9"
         android:background="@drawable/right"
-        android:layout_above="@+id/button_17"
+        android:layout_below="@+id/straighttobodypic"
         android:layout_alignRight="@+id/straighttobodypic"
         android:layout_alignEnd="@+id/straighttobodypic" />
 
@@ -156,16 +157,16 @@
         android:layout_height="50dp"
         android:id="@+id/lowkickpic"
         android:background="@drawable/lowkick"
-        android:layout_above="@+id/button_10"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true" />
+        android:layout_above="@+id/button_9"
+        android:layout_alignLeft="@+id/button_5"
+        android:layout_alignStart="@+id/button_5" />
 
     <ImageButton
         android:layout_width="50dp"
         android:layout_height="50dp"
         android:id="@+id/button_10"
         android:background="@drawable/left"
-        android:layout_above="@+id/button_9"
+        android:layout_below="@+id/lowkickpic"
         android:layout_alignLeft="@+id/lowkickpic"
         android:layout_alignStart="@+id/lowkickpic" />
 
@@ -174,19 +175,17 @@
         android:layout_height="50dp"
         android:id="@+id/button_11"
         android:background="@drawable/right"
-        android:layout_above="@+id/button_9"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true" />
+        android:layout_below="@+id/lowkickpic"
+        android:layout_toRightOf="@+id/button_10"
+        android:layout_toEndOf="@+id/button_10" />
 
     <ImageView
         android:layout_width="100dp"
         android:layout_height="50dp"
         android:id="@+id/middlekickpic"
         android:background="@drawable/middlekick"
-        android:layout_marginTop="45dp"
-        android:layout_below="@+id/button_17"
-        android:layout_alignLeft="@+id/button_17"
-        android:layout_alignStart="@+id/button_17" />
+        android:layout_marginTop="260dp"
+        android:layout_marginLeft="10dp"/>
 
     <ImageButton
         android:layout_width="50dp"
@@ -203,24 +202,23 @@
         android:id="@+id/button_13"
         android:background="@drawable/right"
         android:layout_below="@+id/middlekickpic"
-        android:layout_alignRight="@+id/middlekickpic"
-        android:layout_alignEnd="@+id/middlekickpic" />
+        android:layout_toRightOf="@+id/button_12"
+        android:layout_toEndOf="@+id/button_12" />
 
     <ImageView
         android:layout_width="100dp"
         android:layout_height="50dp"
         android:id="@+id/highkickpic"
         android:background="@drawable/highkick"
-        android:layout_above="@+id/button_15"
-        android:layout_alignRight="@+id/button_11"
-        android:layout_alignEnd="@+id/button_11" />
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="260dp" />
 
     <ImageButton
         android:layout_width="50dp"
         android:layout_height="50dp"
         android:id="@+id/button_14"
         android:background="@drawable/left"
-        android:layout_below="@+id/middlekickpic"
+        android:layout_below="@+id/highkickpic"
         android:layout_alignLeft="@+id/highkickpic"
         android:layout_alignStart="@+id/highkickpic" />
 
@@ -229,9 +227,9 @@
         android:layout_height="50dp"
         android:id="@+id/button_15"
         android:background="@drawable/right"
-        android:layout_alignTop="@+id/button_14"
-        android:layout_toRightOf="@+id/button_10"
-        android:layout_toEndOf="@+id/button_10" />
+        android:layout_below="@+id/highkickpic"
+        android:layout_toRightOf="@+id/button_14"
+        android:layout_toEndOf="@+id/button_14" />
 
     <ImageButton
         android:layout_width="100dp"

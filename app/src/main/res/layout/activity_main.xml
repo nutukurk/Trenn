@@ -19,7 +19,7 @@
         android:layout_height="50dp"
         android:id="@+id/button_1"
         android:focusableInTouchMode="false"
-        android:background="@drawable/Left"
+        android:background="@drawable/left"
         android:layout_below="@+id/straightpic"
         android:layout_toRightOf="@+id/textview_1"
         android:layout_toEndOf="@+id/textview_1" />
@@ -28,7 +28,7 @@
         android:layout_width="50dp"
         android:layout_height="50dp"
         android:id="@+id/button_2"
-        android:background="@drawable/Right"
+        android:background="@drawable/right"
         android:layout_below="@+id/straightpic"
         android:layout_alignRight="@+id/straightpic"
         android:layout_alignEnd="@+id/straightpic" />
@@ -37,7 +37,7 @@
         android:layout_width="100dp"
         android:layout_height="50dp"
         android:id="@+id/straightpic"
-        android:background="@drawable/Straight"
+        android:background="@drawable/straight"
         android:focusable="true"
         android:layout_alignParentTop="true"
         android:layout_toRightOf="@+id/textview_1"
@@ -47,7 +47,7 @@
         android:layout_width="100dp"
         android:layout_height="50dp"
         android:id="@+id/hookpic"
-        android:background="@drawable/Hook"
+        android:background="@drawable/hook"
         android:layout_alignParentTop="true"
         android:layout_alignLeft="@+id/straighttobodypic"
         android:layout_alignStart="@+id/straighttobodypic" />
@@ -56,7 +56,7 @@
         android:layout_width="50dp"
         android:layout_height="50dp"
         android:id="@+id/button_3"
-        android:background="@drawable/Left"
+        android:background="@drawable/left"
         android:layout_alignTop="@+id/button_4"
         android:layout_alignLeft="@+id/hookpic"
         android:layout_alignStart="@+id/hookpic" />
@@ -65,7 +65,7 @@
         android:layout_width="50dp"
         android:layout_height="50dp"
         android:id="@+id/button_4"
-        android:background="@drawable/Right"
+        android:background="@drawable/right"
         android:layout_below="@+id/hookpic"
         android:layout_toRightOf="@+id/button_3"
         android:layout_toEndOf="@+id/button_3" />
@@ -74,7 +74,7 @@
         android:layout_width="100dp"
         android:layout_height="50dp"
         android:id="@+id/uppercutpic"
-        android:background="@drawable/Uppercut"
+        android:background="@drawable/uppercut"
         android:layout_alignParentTop="true"
         android:layout_alignRight="@+id/button_6"
         android:layout_alignEnd="@+id/button_6" />
@@ -83,7 +83,7 @@
         android:layout_width="50dp"
         android:layout_height="50dp"
         android:id="@+id/button_5"
-        android:background="@drawable/Left"
+        android:background="@drawable/left"
         android:layout_below="@+id/uppercutpic"
         android:layout_alignLeft="@+id/uppercutpic"
         android:layout_alignStart="@+id/uppercutpic" />
@@ -92,7 +92,7 @@
         android:layout_width="50dp"
         android:layout_height="50dp"
         android:id="@+id/button_6"
-        android:background="@drawable/Right"
+        android:background="@drawable/right"
         android:layout_below="@+id/uppercutpic"
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true" />
@@ -101,7 +101,7 @@
         android:layout_width="100dp"
         android:layout_height="50dp"
         android:id="@+id/hooktobodypic"
-        android:background="@drawable/HookToBody"
+        android:background="@drawable/hooktobody"
         android:layout_alignTop="@+id/straighttobodypic"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true" />
@@ -110,7 +110,7 @@
         android:layout_width="50dp"
         android:layout_height="50dp"
         android:id="@+id/button_7"
-        android:background="@drawable/Left"
+        android:background="@drawable/left"
         android:layout_centerVertical="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true" />
@@ -119,7 +119,7 @@
         android:layout_width="50dp"
         android:layout_height="50dp"
         android:id="@+id/button_8"
-        android:background="@drawable/Right"
+        android:background="@drawable/right"
         android:layout_alignTop="@+id/button_7"
         android:layout_toRightOf="@+id/button_7"
         android:layout_toEndOf="@+id/button_7" />
@@ -128,7 +128,7 @@
         android:layout_width="100dp"
         android:layout_height="50dp"
         android:id="@+id/straighttobodypic"
-        android:background="@drawable/StraightToBody"
+        android:background="@drawable/straighttobody"
         android:layout_above="@+id/button_8"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="49dp" />
@@ -137,7 +137,7 @@
         android:layout_width="50dp"
         android:layout_height="50dp"
         android:id="@+id/button_17"
-        android:background="@drawable/Left"
+        android:background="@drawable/left"
         android:layout_below="@+id/straighttobodypic"
         android:layout_toLeftOf="@+id/button_9"
         android:layout_toStartOf="@+id/button_9" />
@@ -146,7 +146,7 @@
         android:layout_width="50dp"
         android:layout_height="50dp"
         android:id="@+id/button_9"
-        android:background="@drawable/Right"
+        android:background="@drawable/right"
         android:layout_above="@+id/button_17"
         android:layout_alignRight="@+id/straighttobodypic"
         android:layout_alignEnd="@+id/straighttobodypic" />
@@ -155,7 +155,7 @@
         android:layout_width="100dp"
         android:layout_height="50dp"
         android:id="@+id/lowkickpic"
-        android:background="@drawable/LowKick"
+        android:background="@drawable/lowkick"
         android:layout_above="@+id/button_10"
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true" />
@@ -164,7 +164,7 @@
         android:layout_width="50dp"
         android:layout_height="50dp"
         android:id="@+id/button_10"
-        android:background="@drawable/Left"
+        android:background="@drawable/left"
         android:layout_above="@+id/button_9"
         android:layout_alignLeft="@+id/lowkickpic"
         android:layout_alignStart="@+id/lowkickpic" />
@@ -173,7 +173,7 @@
         android:layout_width="50dp"
         android:layout_height="50dp"
         android:id="@+id/button_11"
-        android:background="@drawable/Right"
+        android:background="@drawable/right"
         android:layout_above="@+id/button_9"
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true" />
@@ -182,7 +182,7 @@
         android:layout_width="100dp"
         android:layout_height="50dp"
         android:id="@+id/middlekickpic"
-        android:background="@drawable/Middlekick"
+        android:background="@drawable/middlekick"
         android:layout_marginTop="45dp"
         android:layout_below="@+id/button_17"
         android:layout_alignLeft="@+id/button_17"
@@ -192,7 +192,7 @@
         android:layout_width="50dp"
         android:layout_height="50dp"
         android:id="@+id/button_12"
-        android:background="@drawable/Left"
+        android:background="@drawable/left"
         android:layout_below="@+id/middlekickpic"
         android:layout_alignLeft="@+id/middlekickpic"
         android:layout_alignStart="@+id/middlekickpic" />
@@ -201,7 +201,7 @@
         android:layout_width="50dp"
         android:layout_height="50dp"
         android:id="@+id/button_13"
-        android:background="@drawable/Right"
+        android:background="@drawable/right"
         android:layout_below="@+id/middlekickpic"
         android:layout_alignRight="@+id/middlekickpic"
         android:layout_alignEnd="@+id/middlekickpic" />
@@ -210,7 +210,7 @@
         android:layout_width="100dp"
         android:layout_height="50dp"
         android:id="@+id/highkickpic"
-        android:background="@drawable/HighKick"
+        android:background="@drawable/highkick"
         android:layout_above="@+id/button_15"
         android:layout_alignRight="@+id/button_11"
         android:layout_alignEnd="@+id/button_11" />
@@ -219,7 +219,7 @@
         android:layout_width="50dp"
         android:layout_height="50dp"
         android:id="@+id/button_14"
-        android:background="@drawable/Left"
+        android:background="@drawable/left"
         android:layout_below="@+id/middlekickpic"
         android:layout_alignLeft="@+id/highkickpic"
         android:layout_alignStart="@+id/highkickpic" />
@@ -228,7 +228,7 @@
         android:layout_width="50dp"
         android:layout_height="50dp"
         android:id="@+id/button_15"
-        android:background="@drawable/Right"
+        android:background="@drawable/right"
         android:layout_alignTop="@+id/button_14"
         android:layout_toRightOf="@+id/button_10"
         android:layout_toEndOf="@+id/button_10" />

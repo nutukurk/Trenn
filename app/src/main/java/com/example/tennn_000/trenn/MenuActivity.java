@@ -15,6 +15,7 @@ import android.widget.ImageView;
 public class MenuActivity extends ActionBarActivity implements
 View.OnTouchListener{
 
+    // vastu kurku
     private ImageView image_button_1;
     private ImageView image_button_2;
     private ImageView image_button_3;

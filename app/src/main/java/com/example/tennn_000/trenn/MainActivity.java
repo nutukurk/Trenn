@@ -12,7 +12,7 @@ import android.widget.TextView;
 
 public class MainActivity extends ActionBarActivity implements View.OnClickListener{
 
-    View button_1; /*left jab*/
+    View button_1; /*left jaab*/
     View button_2; /*right straight*/
     View button_3; /*left hook*/
     View button_4; /*right hook*/
@@ -21,6 +21,7 @@ public class MainActivity extends ActionBarActivity implements View.OnClickListe
     View button_7; /*left hook to the body*/
     View button_8; /*right hook to the body*/
     View button_9; /*straight right to the body*/
+    View button_17; /*staight left to the body*/
     View button_10; /*left lowkick*/
     View button_11; /*right lowkick*/
     View button_12; /*left middlekick*/
@@ -52,6 +53,7 @@ public class MainActivity extends ActionBarActivity implements View.OnClickListe
         button_14 = findViewById(R.id.button_14);
         button_15 = findViewById(R.id.button_15);
         button_16 = findViewById(R.id.button_16);
+        button_17 = findViewById(R.id.button_17);
 
         textview_1 = (TextView) findViewById(R.id.textview_1);
 
@@ -103,6 +105,7 @@ public class MainActivity extends ActionBarActivity implements View.OnClickListe
         button_14.setOnClickListener(this);
         button_15.setOnClickListener(this);
         button_16.setOnClickListener(this);
+        button_17.setOnClickListener(this);
     }
 
     @Override
@@ -124,6 +127,7 @@ public class MainActivity extends ActionBarActivity implements View.OnClickListe
         button_14.setOnClickListener(null);
         button_15.setOnClickListener(null);
         button_16.setOnClickListener(null);
+        button_17.setOnClickListener(null);
 
 
     }
@@ -206,10 +210,14 @@ public class MainActivity extends ActionBarActivity implements View.OnClickListe
             MenuActivity.combo = MenuActivity.combo + "right highkick,  ";
 
         }
+        else if(v.getId() == R.id.button_17){
+            System.out.println("button 17 clicked");
+            MenuActivity.combo = MenuActivity.combo + "left straight to the body,  ";
+
+        }
         else if(v.getId() == R.id.button_16){
             System.out.println("button 16 clicked");
             textview_1.setText(MenuActivity.combo);
-            //textview_1.setText("kukkurkurat");
             if(MenuActivity.combo != ""){
                 MenuActivity.savedComboCounter = MenuActivity.savedComboCounter + 1;
                 MenuActivity.savedCombo = MenuActivity.savedCombo + "Combo nr "

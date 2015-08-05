@@ -242,5 +242,32 @@
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true" />
 
+    <ImageView
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:id="@+id/kneepic"
+        android:background="@drawable/knee"
+        android:layout_alignTop="@+id/highkickpic"
+        android:layout_alignLeft="@+id/button_10"
+        android:layout_alignStart="@+id/button_10" />
+
+    <ImageButton
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:id="@+id/button_18"
+        android:background="@drawable/left"
+        android:layout_below="@+id/kneepic"
+        android:layout_alignLeft="@+id/kneepic"
+        android:layout_alignStart="@+id/kneepic" />
+
+    <ImageButton
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:id="@+id/button_19"
+        android:background="@drawable/right"
+        android:layout_alignTop="@+id/button_18"
+        android:layout_toRightOf="@+id/button_18"
+        android:layout_toEndOf="@+id/button_18" />
+
 
 </RelativeLayout>

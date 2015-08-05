@@ -28,6 +28,8 @@ public class MainActivity extends ActionBarActivity implements View.OnClickListe
     View button_13; /*right middlekick*/
     View button_14; /*left highkick*/
     View button_15; /*right highkick*/
+    View button_18; /*left knee*/
+    View button_19; /*right knee*/
     View button_16; /*combo*/
     TextView textview_1;
     private ImageView create_combos_background;
@@ -54,6 +56,8 @@ public class MainActivity extends ActionBarActivity implements View.OnClickListe
         button_15 = findViewById(R.id.button_15);
         button_16 = findViewById(R.id.button_16);
         button_17 = findViewById(R.id.button_17);
+        button_18 = findViewById(R.id.button_18);
+        button_19 = findViewById(R.id.button_19);
 
         textview_1 = (TextView) findViewById(R.id.textview_1);
 
@@ -106,6 +110,8 @@ public class MainActivity extends ActionBarActivity implements View.OnClickListe
         button_15.setOnClickListener(this);
         button_16.setOnClickListener(this);
         button_17.setOnClickListener(this);
+        button_18.setOnClickListener(this);
+        button_19.setOnClickListener(this);
     }
 
     @Override
@@ -128,6 +134,8 @@ public class MainActivity extends ActionBarActivity implements View.OnClickListe
         button_15.setOnClickListener(null);
         button_16.setOnClickListener(null);
         button_17.setOnClickListener(null);
+        button_18.setOnClickListener(null);
+        button_19.setOnClickListener(null);
 
 
     }
@@ -213,6 +221,16 @@ public class MainActivity extends ActionBarActivity implements View.OnClickListe
         else if(v.getId() == R.id.button_17){
             System.out.println("button 17 clicked");
             MenuActivity.combo = MenuActivity.combo + "left straight to the body,  ";
+
+        }
+        else if(v.getId() == R.id.button_18){
+            System.out.println("button 18 clicked");
+            MenuActivity.combo = MenuActivity.combo + "left knee,  ";
+
+        }
+        else if(v.getId() == R.id.button_19){
+            System.out.println("button 19 clicked");
+            MenuActivity.combo = MenuActivity.combo + "right knee,  ";
 
         }
         else if(v.getId() == R.id.button_16){

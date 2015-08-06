@@ -1,16 +1,20 @@
 package com.example.tennn_000.trenn;
 
 
+import android.content.Intent;
+import android.graphics.Rect;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.MotionEvent;
 import android.view.View;
+import android.view.animation.AlphaAnimation;
 import android.widget.ImageView;
 import android.widget.TextView;
 
 
-public class MainActivity extends ActionBarActivity implements View.OnClickListener{
+public class MainActivity extends ActionBarActivity implements View.OnClickListener, View.OnTouchListener {
 
     View button_1; /*left jaab*/
     View button_2; /*right straight*/
@@ -93,7 +97,9 @@ public class MainActivity extends ActionBarActivity implements View.OnClickListe
     @Override
     protected void onResume() {
         super.onResume();
-        button_1.setOnClickListener(this);
+        // onclick listeneri asemel ontouch listener
+        //button_1.setOnClickListener(this);
+        button_1.setOnTouchListener(this);
         button_2.setOnClickListener(this);
         button_3.setOnClickListener(this);
         button_4.setOnClickListener(this);
@@ -117,7 +123,8 @@ public class MainActivity extends ActionBarActivity implements View.OnClickListe
     @Override
     protected void onPause() {
         super.onPause();
-        button_1.setOnClickListener(null);
+        //button_1.setOnClickListener(null);
+        button_1.setOnTouchListener(null);
         button_2.setOnClickListener(null);
         button_3.setOnClickListener(null);
         button_4.setOnClickListener(null);
@@ -248,5 +255,40 @@ public class MainActivity extends ActionBarActivity implements View.OnClickListe
                 MenuActivity.editor.commit();
             }
         }
+    }
+
+    private Rect rect;
+
+    @Override
+    public boolean onTouch(View v, MotionEvent event) {
+        // tee kõigi nuppudega samasugused if laused
+        if (v.getId() == R.id.button_1) {
+            // seda ma prindin logimiseks - pole vaja teha
+            System.out.println("button 1 ontouched");
+            if (event.getAction() == MotionEvent.ACTION_UP) {
+                // kui näpp võetakse ära, siis pole pilt läbipaistev
+                setAlphaForView(v, 1.0f);
+                if (rect != null && !rect.contains(v.getLeft() + (int) event.getX(), v.getTop() + (int) event.getY())) {
+                    return true;
+                }
+                // siia kirjuta see, mis juhtub kui näpp võetakse nupu pealt ära
+                MenuActivity.combo = MenuActivity.combo + "left jab,  ";
+                return true;
+
+            } else if (event.getAction() == MotionEvent.ACTION_DOWN) {
+                rect = new Rect(v.getLeft(), v.getTop(), v.getRight(), v.getBottom());
+                // kui näpp pannakse nupu peale, siis tehakse pilt poolenisti läbipaistvaks
+                setAlphaForView(v, 0.5f);
+                return true;
+            }
+        }
+        return false;
+    }
+
+    private void setAlphaForView(View v, float alpha) {
+        AlphaAnimation animation = new AlphaAnimation(alpha, alpha);
+        animation.setDuration(0);
+        animation.setFillAfter(true);
+        v.startAnimation(animation);
     }
 }

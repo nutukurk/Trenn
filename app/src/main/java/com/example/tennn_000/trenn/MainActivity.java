@@ -17,6 +17,7 @@ import android.widget.TextView;
 public class MainActivity extends ActionBarActivity implements View.OnClickListener, View.OnTouchListener {
 
     View button_1; /*left jaab*/
+    //private ImageView button_1;
     View button_2; /*right straight*/
     View button_3; /*left hook*/
     View button_4; /*right hook*/
@@ -44,6 +45,7 @@ public class MainActivity extends ActionBarActivity implements View.OnClickListe
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         button_1 = findViewById(R.id.button_1);
+        //button_1 = (ImageView) findViewById(R.id.button_1);
         button_2 = findViewById(R.id.button_2);
         button_3 = findViewById(R.id.button_3);
         button_4 = findViewById(R.id.button_4);
@@ -62,6 +64,8 @@ public class MainActivity extends ActionBarActivity implements View.OnClickListe
         button_17 = findViewById(R.id.button_17);
         button_18 = findViewById(R.id.button_18);
         button_19 = findViewById(R.id.button_19);
+
+        //button_1.setImageDrawable(getResources().getDrawable(R.drawable.left));
 
         textview_1 = (TextView) findViewById(R.id.textview_1);
 
@@ -97,52 +101,49 @@ public class MainActivity extends ActionBarActivity implements View.OnClickListe
     @Override
     protected void onResume() {
         super.onResume();
-        // onclick listeneri asemel ontouch listener
-        //button_1.setOnClickListener(this);
         button_1.setOnTouchListener(this);
-        button_2.setOnClickListener(this);
-        button_3.setOnClickListener(this);
-        button_4.setOnClickListener(this);
-        button_5.setOnClickListener(this);
-        button_6.setOnClickListener(this);
-        button_7.setOnClickListener(this);
-        button_8.setOnClickListener(this);
-        button_9.setOnClickListener(this);
-        button_10.setOnClickListener(this);
-        button_11.setOnClickListener(this);
-        button_12.setOnClickListener(this);
-        button_13.setOnClickListener(this);
-        button_14.setOnClickListener(this);
-        button_15.setOnClickListener(this);
-        button_16.setOnClickListener(this);
-        button_17.setOnClickListener(this);
-        button_18.setOnClickListener(this);
-        button_19.setOnClickListener(this);
+        button_2.setOnTouchListener(this);
+        button_3.setOnTouchListener(this);
+        button_4.setOnTouchListener(this);
+        button_5.setOnTouchListener(this);
+        button_6.setOnTouchListener(this);
+        button_7.setOnTouchListener(this);
+        button_8.setOnTouchListener(this);
+        button_9.setOnTouchListener(this);
+        button_10.setOnTouchListener(this);
+        button_11.setOnTouchListener(this);
+        button_12.setOnTouchListener(this);
+        button_13.setOnTouchListener(this);
+        button_14.setOnTouchListener(this);
+        button_15.setOnTouchListener(this);
+        button_16.setOnTouchListener(this);
+        button_17.setOnTouchListener(this);
+        button_18.setOnTouchListener(this);
+        button_19.setOnTouchListener(this);
     }
 
     @Override
     protected void onPause() {
         super.onPause();
-        //button_1.setOnClickListener(null);
         button_1.setOnTouchListener(null);
-        button_2.setOnClickListener(null);
-        button_3.setOnClickListener(null);
-        button_4.setOnClickListener(null);
-        button_5.setOnClickListener(null);
-        button_6.setOnClickListener(null);
-        button_7.setOnClickListener(null);
-        button_8.setOnClickListener(null);
-        button_9.setOnClickListener(null);
-        button_10.setOnClickListener(null);
-        button_11.setOnClickListener(null);
-        button_12.setOnClickListener(null);
-        button_13.setOnClickListener(null);
-        button_14.setOnClickListener(null);
-        button_15.setOnClickListener(null);
-        button_16.setOnClickListener(null);
-        button_17.setOnClickListener(null);
-        button_18.setOnClickListener(null);
-        button_19.setOnClickListener(null);
+        button_2.setOnTouchListener(null);
+        button_3.setOnTouchListener(null);
+        button_4.setOnTouchListener(null);
+        button_5.setOnTouchListener(null);
+        button_6.setOnTouchListener(null);
+        button_7.setOnTouchListener(null);
+        button_8.setOnTouchListener(null);
+        button_9.setOnTouchListener(null);
+        button_10.setOnTouchListener(null);
+        button_11.setOnTouchListener(null);
+        button_12.setOnTouchListener(null);
+        button_13.setOnTouchListener(null);
+        button_14.setOnTouchListener(null);
+        button_15.setOnTouchListener(null);
+        button_16.setOnTouchListener(null);
+        button_17.setOnTouchListener(null);
+        button_18.setOnTouchListener(null);
+        button_19.setOnTouchListener(null);
 
 
     }
@@ -267,12 +268,373 @@ public class MainActivity extends ActionBarActivity implements View.OnClickListe
             System.out.println("button 1 ontouched");
             if (event.getAction() == MotionEvent.ACTION_UP) {
                 // kui näpp võetakse ära, siis pole pilt läbipaistev
+                //button_1.setImageDrawable(getResources().getDrawable(R.drawable.left));
                 setAlphaForView(v, 1.0f);
                 if (rect != null && !rect.contains(v.getLeft() + (int) event.getX(), v.getTop() + (int) event.getY())) {
                     return true;
                 }
                 // siia kirjuta see, mis juhtub kui näpp võetakse nupu pealt ära
                 MenuActivity.combo = MenuActivity.combo + "left jab,  ";
+                return true;
+
+            } else if (event.getAction() == MotionEvent.ACTION_DOWN) {
+                rect = new Rect(v.getLeft(), v.getTop(), v.getRight(), v.getBottom());
+                // kui näpp pannakse nupu peale, siis tehakse pilt poolenisti läbipaistvaks
+                //button_1.setImageDrawable(getResources().getDrawable(R.drawable.leftdog));
+                setAlphaForView(v, 0.5f);
+                return true;
+            }
+        }
+
+        else if (v.getId() == R.id.button_2) {
+            // seda ma prindin logimiseks - pole vaja teha
+            System.out.println("button 2 ontouched");
+            if (event.getAction() == MotionEvent.ACTION_UP) {
+                // kui näpp võetakse ära, siis pole pilt läbipaistev
+                setAlphaForView(v, 1.0f);
+                if (rect != null && !rect.contains(v.getLeft() + (int) event.getX(), v.getTop() + (int) event.getY())) {
+                    return true;
+                }
+                // siia kirjuta see, mis juhtub kui näpp võetakse nupu pealt ära
+                MenuActivity.combo = MenuActivity.combo + "right straight,  ";
+                return true;
+
+            } else if (event.getAction() == MotionEvent.ACTION_DOWN) {
+                rect = new Rect(v.getLeft(), v.getTop(), v.getRight(), v.getBottom());
+                // kui näpp pannakse nupu peale, siis tehakse pilt poolenisti läbipaistvaks
+                setAlphaForView(v, 0.5f);
+                return true;
+            }
+        }
+
+        else if (v.getId() == R.id.button_3) {
+            // seda ma prindin logimiseks - pole vaja teha
+            System.out.println("button 3 ontouched");
+            if (event.getAction() == MotionEvent.ACTION_UP) {
+                // kui näpp võetakse ära, siis pole pilt läbipaistev
+                setAlphaForView(v, 1.0f);
+                if (rect != null && !rect.contains(v.getLeft() + (int) event.getX(), v.getTop() + (int) event.getY())) {
+                    return true;
+                }
+                // siia kirjuta see, mis juhtub kui näpp võetakse nupu pealt ära
+                MenuActivity.combo = MenuActivity.combo + "left hook,  ";
+                return true;
+
+            } else if (event.getAction() == MotionEvent.ACTION_DOWN) {
+                rect = new Rect(v.getLeft(), v.getTop(), v.getRight(), v.getBottom());
+                // kui näpp pannakse nupu peale, siis tehakse pilt poolenisti läbipaistvaks
+                setAlphaForView(v, 0.5f);
+                return true;
+            }
+        }
+
+        else if (v.getId() == R.id.button_4) {
+            // seda ma prindin logimiseks - pole vaja teha
+            System.out.println("button 4 ontouched");
+            if (event.getAction() == MotionEvent.ACTION_UP) {
+                // kui näpp võetakse ära, siis pole pilt läbipaistev
+                setAlphaForView(v, 1.0f);
+                if (rect != null && !rect.contains(v.getLeft() + (int) event.getX(), v.getTop() + (int) event.getY())) {
+                    return true;
+                }
+                // siia kirjuta see, mis juhtub kui näpp võetakse nupu pealt ära
+                MenuActivity.combo = MenuActivity.combo + "right hook,  ";
+                return true;
+
+            } else if (event.getAction() == MotionEvent.ACTION_DOWN) {
+                rect = new Rect(v.getLeft(), v.getTop(), v.getRight(), v.getBottom());
+                // kui näpp pannakse nupu peale, siis tehakse pilt poolenisti läbipaistvaks
+                setAlphaForView(v, 0.5f);
+                return true;
+            }
+        }
+
+        else if (v.getId() == R.id.button_5) {
+            if (event.getAction() == MotionEvent.ACTION_UP) {
+                // kui näpp võetakse ära, siis pole pilt läbipaistev
+                setAlphaForView(v, 1.0f);
+                if (rect != null && !rect.contains(v.getLeft() + (int) event.getX(), v.getTop() + (int) event.getY())) {
+                    return true;
+                }
+                // siia kirjuta see, mis juhtub kui näpp võetakse nupu pealt ära
+                MenuActivity.combo = MenuActivity.combo + "left uppercut,  ";
+                return true;
+
+            } else if (event.getAction() == MotionEvent.ACTION_DOWN) {
+                rect = new Rect(v.getLeft(), v.getTop(), v.getRight(), v.getBottom());
+                // kui näpp pannakse nupu peale, siis tehakse pilt poolenisti läbipaistvaks
+                setAlphaForView(v, 0.5f);
+                return true;
+            }
+        }
+
+        else if (v.getId() == R.id.button_6) {
+            if (event.getAction() == MotionEvent.ACTION_UP) {
+                // kui näpp võetakse ära, siis pole pilt läbipaistev
+                setAlphaForView(v, 1.0f);
+                if (rect != null && !rect.contains(v.getLeft() + (int) event.getX(), v.getTop() + (int) event.getY())) {
+                    return true;
+                }
+                // siia kirjuta see, mis juhtub kui näpp võetakse nupu pealt ära
+                MenuActivity.combo = MenuActivity.combo + "right uppercut,  ";
+                return true;
+
+            } else if (event.getAction() == MotionEvent.ACTION_DOWN) {
+                rect = new Rect(v.getLeft(), v.getTop(), v.getRight(), v.getBottom());
+                // kui näpp pannakse nupu peale, siis tehakse pilt poolenisti läbipaistvaks
+                setAlphaForView(v, 0.5f);
+                return true;
+            }
+        }
+
+        else if (v.getId() == R.id.button_7) {
+            if (event.getAction() == MotionEvent.ACTION_UP) {
+                // kui näpp võetakse ära, siis pole pilt läbipaistev
+                setAlphaForView(v, 1.0f);
+                if (rect != null && !rect.contains(v.getLeft() + (int) event.getX(), v.getTop() + (int) event.getY())) {
+                    return true;
+                }
+                // siia kirjuta see, mis juhtub kui näpp võetakse nupu pealt ära
+                MenuActivity.combo = MenuActivity.combo + "left hook to the body,  ";
+                return true;
+
+            } else if (event.getAction() == MotionEvent.ACTION_DOWN) {
+                rect = new Rect(v.getLeft(), v.getTop(), v.getRight(), v.getBottom());
+                // kui näpp pannakse nupu peale, siis tehakse pilt poolenisti läbipaistvaks
+                setAlphaForView(v, 0.5f);
+                return true;
+            }
+        }
+
+        else if (v.getId() == R.id.button_8) {
+            if (event.getAction() == MotionEvent.ACTION_UP) {
+                // kui näpp võetakse ära, siis pole pilt läbipaistev
+                setAlphaForView(v, 1.0f);
+                if (rect != null && !rect.contains(v.getLeft() + (int) event.getX(), v.getTop() + (int) event.getY())) {
+                    return true;
+                }
+                // siia kirjuta see, mis juhtub kui näpp võetakse nupu pealt ära
+                MenuActivity.combo = MenuActivity.combo + "right hook to the body,  ";
+                return true;
+
+            } else if (event.getAction() == MotionEvent.ACTION_DOWN) {
+                rect = new Rect(v.getLeft(), v.getTop(), v.getRight(), v.getBottom());
+                // kui näpp pannakse nupu peale, siis tehakse pilt poolenisti läbipaistvaks
+                setAlphaForView(v, 0.5f);
+                return true;
+            }
+        }
+
+        else if (v.getId() == R.id.button_9) {
+            if (event.getAction() == MotionEvent.ACTION_UP) {
+                // kui näpp võetakse ära, siis pole pilt läbipaistev
+                setAlphaForView(v, 1.0f);
+                if (rect != null && !rect.contains(v.getLeft() + (int) event.getX(), v.getTop() + (int) event.getY())) {
+                    return true;
+                }
+                // siia kirjuta see, mis juhtub kui näpp võetakse nupu pealt ära
+                MenuActivity.combo = MenuActivity.combo + "right straight to the body,  ";
+                return true;
+
+            } else if (event.getAction() == MotionEvent.ACTION_DOWN) {
+                rect = new Rect(v.getLeft(), v.getTop(), v.getRight(), v.getBottom());
+                // kui näpp pannakse nupu peale, siis tehakse pilt poolenisti läbipaistvaks
+                setAlphaForView(v, 0.5f);
+                return true;
+            }
+        }
+
+        else if (v.getId() == R.id.button_10) {
+            if (event.getAction() == MotionEvent.ACTION_UP) {
+                // kui näpp võetakse ära, siis pole pilt läbipaistev
+                setAlphaForView(v, 1.0f);
+                if (rect != null && !rect.contains(v.getLeft() + (int) event.getX(), v.getTop() + (int) event.getY())) {
+                    return true;
+                }
+                // siia kirjuta see, mis juhtub kui näpp võetakse nupu pealt ära
+                MenuActivity.combo = MenuActivity.combo + "left lowkick,  ";
+                return true;
+
+            } else if (event.getAction() == MotionEvent.ACTION_DOWN) {
+                rect = new Rect(v.getLeft(), v.getTop(), v.getRight(), v.getBottom());
+                // kui näpp pannakse nupu peale, siis tehakse pilt poolenisti läbipaistvaks
+                setAlphaForView(v, 0.5f);
+                return true;
+            }
+        }
+
+        else if (v.getId() == R.id.button_11) {
+            if (event.getAction() == MotionEvent.ACTION_UP) {
+                // kui näpp võetakse ära, siis pole pilt läbipaistev
+                setAlphaForView(v, 1.0f);
+                if (rect != null && !rect.contains(v.getLeft() + (int) event.getX(), v.getTop() + (int) event.getY())) {
+                    return true;
+                }
+                // siia kirjuta see, mis juhtub kui näpp võetakse nupu pealt ära
+                MenuActivity.combo = MenuActivity.combo + "right lowkick,  ";
+                return true;
+
+            } else if (event.getAction() == MotionEvent.ACTION_DOWN) {
+                rect = new Rect(v.getLeft(), v.getTop(), v.getRight(), v.getBottom());
+                // kui näpp pannakse nupu peale, siis tehakse pilt poolenisti läbipaistvaks
+                setAlphaForView(v, 0.5f);
+                return true;
+            }
+        }
+
+        else if (v.getId() == R.id.button_12) {
+            if (event.getAction() == MotionEvent.ACTION_UP) {
+                // kui näpp võetakse ära, siis pole pilt läbipaistev
+                setAlphaForView(v, 1.0f);
+                if (rect != null && !rect.contains(v.getLeft() + (int) event.getX(), v.getTop() + (int) event.getY())) {
+                    return true;
+                }
+                // siia kirjuta see, mis juhtub kui näpp võetakse nupu pealt ära
+                MenuActivity.combo = MenuActivity.combo + "left middlekick,  ";
+                return true;
+
+            } else if (event.getAction() == MotionEvent.ACTION_DOWN) {
+                rect = new Rect(v.getLeft(), v.getTop(), v.getRight(), v.getBottom());
+                // kui näpp pannakse nupu peale, siis tehakse pilt poolenisti läbipaistvaks
+                setAlphaForView(v, 0.5f);
+                return true;
+            }
+        }
+
+        else if (v.getId() == R.id.button_13) {
+            if (event.getAction() == MotionEvent.ACTION_UP) {
+                // kui näpp võetakse ära, siis pole pilt läbipaistev
+                setAlphaForView(v, 1.0f);
+                if (rect != null && !rect.contains(v.getLeft() + (int) event.getX(), v.getTop() + (int) event.getY())) {
+                    return true;
+                }
+                // siia kirjuta see, mis juhtub kui näpp võetakse nupu pealt ära
+                MenuActivity.combo = MenuActivity.combo + "right middlekick,  ";
+                return true;
+
+            } else if (event.getAction() == MotionEvent.ACTION_DOWN) {
+                rect = new Rect(v.getLeft(), v.getTop(), v.getRight(), v.getBottom());
+                // kui näpp pannakse nupu peale, siis tehakse pilt poolenisti läbipaistvaks
+                setAlphaForView(v, 0.5f);
+                return true;
+            }
+        }
+
+        else if (v.getId() == R.id.button_14) {
+            if (event.getAction() == MotionEvent.ACTION_UP) {
+                // kui näpp võetakse ära, siis pole pilt läbipaistev
+                setAlphaForView(v, 1.0f);
+                if (rect != null && !rect.contains(v.getLeft() + (int) event.getX(), v.getTop() + (int) event.getY())) {
+                    return true;
+                }
+                // siia kirjuta see, mis juhtub kui näpp võetakse nupu pealt ära
+                MenuActivity.combo = MenuActivity.combo + "left highkick,  ";
+                return true;
+
+            } else if (event.getAction() == MotionEvent.ACTION_DOWN) {
+                rect = new Rect(v.getLeft(), v.getTop(), v.getRight(), v.getBottom());
+                // kui näpp pannakse nupu peale, siis tehakse pilt poolenisti läbipaistvaks
+                setAlphaForView(v, 0.5f);
+                return true;
+            }
+        }
+
+        else if (v.getId() == R.id.button_15) {
+            if (event.getAction() == MotionEvent.ACTION_UP) {
+                // kui näpp võetakse ära, siis pole pilt läbipaistev
+                setAlphaForView(v, 1.0f);
+                if (rect != null && !rect.contains(v.getLeft() + (int) event.getX(), v.getTop() + (int) event.getY())) {
+                    return true;
+                }
+                // siia kirjuta see, mis juhtub kui näpp võetakse nupu pealt ära
+                MenuActivity.combo = MenuActivity.combo + "right highkick,  ";
+                return true;
+
+            } else if (event.getAction() == MotionEvent.ACTION_DOWN) {
+                rect = new Rect(v.getLeft(), v.getTop(), v.getRight(), v.getBottom());
+                // kui näpp pannakse nupu peale, siis tehakse pilt poolenisti läbipaistvaks
+                setAlphaForView(v, 0.5f);
+                return true;
+            }
+        }
+
+        else if (v.getId() == R.id.button_16) {
+            if (event.getAction() == MotionEvent.ACTION_UP) {
+                // kui näpp võetakse ära, siis pole pilt läbipaistev
+                setAlphaForView(v, 1.0f);
+                if (rect != null && !rect.contains(v.getLeft() + (int) event.getX(), v.getTop() + (int) event.getY())) {
+                    return true;
+                }
+                // siia kirjuta see, mis juhtub kui näpp võetakse nupu pealt ära
+                textview_1.setText(MenuActivity.combo);
+                if(MenuActivity.combo != ""){
+                    MenuActivity.savedComboCounter = MenuActivity.savedComboCounter + 1;
+                    MenuActivity.savedCombo = MenuActivity.savedCombo + "Combo nr "
+                            + MenuActivity.savedComboCounter + ": \n"
+                            + MenuActivity.combo.substring(0, MenuActivity.combo.length()-3) + "\n\n";
+                    MenuActivity.combo = "";
+
+                    MenuActivity.editor.putString("combos", MenuActivity.savedCombo);
+
+                    MenuActivity.editor.commit();
+                }
+                return true;
+
+            } else if (event.getAction() == MotionEvent.ACTION_DOWN) {
+                rect = new Rect(v.getLeft(), v.getTop(), v.getRight(), v.getBottom());
+                // kui näpp pannakse nupu peale, siis tehakse pilt poolenisti läbipaistvaks
+                setAlphaForView(v, 0.5f);
+                return true;
+            }
+        }
+
+        else if (v.getId() == R.id.button_17) {
+            if (event.getAction() == MotionEvent.ACTION_UP) {
+                // kui näpp võetakse ära, siis pole pilt läbipaistev
+                setAlphaForView(v, 1.0f);
+                if (rect != null && !rect.contains(v.getLeft() + (int) event.getX(), v.getTop() + (int) event.getY())) {
+                    return true;
+                }
+                // siia kirjuta see, mis juhtub kui näpp võetakse nupu pealt ära
+                MenuActivity.combo = MenuActivity.combo + "left straight to the body,  ";
+                return true;
+
+            } else if (event.getAction() == MotionEvent.ACTION_DOWN) {
+                rect = new Rect(v.getLeft(), v.getTop(), v.getRight(), v.getBottom());
+                // kui näpp pannakse nupu peale, siis tehakse pilt poolenisti läbipaistvaks
+                setAlphaForView(v, 0.5f);
+                return true;
+            }
+        }
+
+        else if (v.getId() == R.id.button_18) {
+            if (event.getAction() == MotionEvent.ACTION_UP) {
+                // kui näpp võetakse ära, siis pole pilt läbipaistev
+                setAlphaForView(v, 1.0f);
+                if (rect != null && !rect.contains(v.getLeft() + (int) event.getX(), v.getTop() + (int) event.getY())) {
+                    return true;
+                }
+                // siia kirjuta see, mis juhtub kui näpp võetakse nupu pealt ära
+                MenuActivity.combo = MenuActivity.combo + "left knee,  ";
+                return true;
+
+            } else if (event.getAction() == MotionEvent.ACTION_DOWN) {
+                rect = new Rect(v.getLeft(), v.getTop(), v.getRight(), v.getBottom());
+                // kui näpp pannakse nupu peale, siis tehakse pilt poolenisti läbipaistvaks
+                setAlphaForView(v, 0.5f);
+                return true;
+            }
+        }
+
+        else if (v.getId() == R.id.button_19) {
+            if (event.getAction() == MotionEvent.ACTION_UP) {
+                // kui näpp võetakse ära, siis pole pilt läbipaistev
+                setAlphaForView(v, 1.0f);
+                if (rect != null && !rect.contains(v.getLeft() + (int) event.getX(), v.getTop() + (int) event.getY())) {
+                    return true;
+                }
+                // siia kirjuta see, mis juhtub kui näpp võetakse nupu pealt ära
+                MenuActivity.combo = MenuActivity.combo + "right knee,  ";
                 return true;
 
             } else if (event.getAction() == MotionEvent.ACTION_DOWN) {

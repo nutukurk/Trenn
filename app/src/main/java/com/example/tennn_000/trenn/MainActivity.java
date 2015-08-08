@@ -274,7 +274,7 @@ public class MainActivity extends ActionBarActivity implements View.OnClickListe
                     return true;
                 }
                 // siia kirjuta see, mis juhtub kui näpp võetakse nupu pealt ära
-                MenuActivity.combo = MenuActivity.combo + "left jab,  ";
+                MenuActivity.combo = MenuActivity.combo + "Left jab,  ";
                 return true;
 
             } else if (event.getAction() == MotionEvent.ACTION_DOWN) {
@@ -296,7 +296,7 @@ public class MainActivity extends ActionBarActivity implements View.OnClickListe
                     return true;
                 }
                 // siia kirjuta see, mis juhtub kui näpp võetakse nupu pealt ära
-                MenuActivity.combo = MenuActivity.combo + "right straight,  ";
+                MenuActivity.combo = MenuActivity.combo + "Right straight,  ";
                 return true;
 
             } else if (event.getAction() == MotionEvent.ACTION_DOWN) {
@@ -317,7 +317,7 @@ public class MainActivity extends ActionBarActivity implements View.OnClickListe
                     return true;
                 }
                 // siia kirjuta see, mis juhtub kui näpp võetakse nupu pealt ära
-                MenuActivity.combo = MenuActivity.combo + "left hook,  ";
+                MenuActivity.combo = MenuActivity.combo + "Left hook,  ";
                 return true;
 
             } else if (event.getAction() == MotionEvent.ACTION_DOWN) {
@@ -338,7 +338,7 @@ public class MainActivity extends ActionBarActivity implements View.OnClickListe
                     return true;
                 }
                 // siia kirjuta see, mis juhtub kui näpp võetakse nupu pealt ära
-                MenuActivity.combo = MenuActivity.combo + "right hook,  ";
+                MenuActivity.combo = MenuActivity.combo + "Right hook,  ";
                 return true;
 
             } else if (event.getAction() == MotionEvent.ACTION_DOWN) {
@@ -357,7 +357,7 @@ public class MainActivity extends ActionBarActivity implements View.OnClickListe
                     return true;
                 }
                 // siia kirjuta see, mis juhtub kui näpp võetakse nupu pealt ära
-                MenuActivity.combo = MenuActivity.combo + "left uppercut,  ";
+                MenuActivity.combo = MenuActivity.combo + "Left uppercut,  ";
                 return true;
 
             } else if (event.getAction() == MotionEvent.ACTION_DOWN) {
@@ -376,7 +376,7 @@ public class MainActivity extends ActionBarActivity implements View.OnClickListe
                     return true;
                 }
                 // siia kirjuta see, mis juhtub kui näpp võetakse nupu pealt ära
-                MenuActivity.combo = MenuActivity.combo + "right uppercut,  ";
+                MenuActivity.combo = MenuActivity.combo + "Right uppercut,  ";
                 return true;
 
             } else if (event.getAction() == MotionEvent.ACTION_DOWN) {
@@ -395,7 +395,7 @@ public class MainActivity extends ActionBarActivity implements View.OnClickListe
                     return true;
                 }
                 // siia kirjuta see, mis juhtub kui näpp võetakse nupu pealt ära
-                MenuActivity.combo = MenuActivity.combo + "left hook to the body,  ";
+                MenuActivity.combo = MenuActivity.combo + "Left hook to the body,  ";
                 return true;
 
             } else if (event.getAction() == MotionEvent.ACTION_DOWN) {
@@ -414,7 +414,7 @@ public class MainActivity extends ActionBarActivity implements View.OnClickListe
                     return true;
                 }
                 // siia kirjuta see, mis juhtub kui näpp võetakse nupu pealt ära
-                MenuActivity.combo = MenuActivity.combo + "right hook to the body,  ";
+                MenuActivity.combo = MenuActivity.combo + "Right hook to the body,  ";
                 return true;
 
             } else if (event.getAction() == MotionEvent.ACTION_DOWN) {
@@ -433,7 +433,7 @@ public class MainActivity extends ActionBarActivity implements View.OnClickListe
                     return true;
                 }
                 // siia kirjuta see, mis juhtub kui näpp võetakse nupu pealt ära
-                MenuActivity.combo = MenuActivity.combo + "right straight to the body,  ";
+                MenuActivity.combo = MenuActivity.combo + "Right straight to the body,  ";
                 return true;
 
             } else if (event.getAction() == MotionEvent.ACTION_DOWN) {
@@ -452,7 +452,7 @@ public class MainActivity extends ActionBarActivity implements View.OnClickListe
                     return true;
                 }
                 // siia kirjuta see, mis juhtub kui näpp võetakse nupu pealt ära
-                MenuActivity.combo = MenuActivity.combo + "left lowkick,  ";
+                MenuActivity.combo = MenuActivity.combo + "Left lowkick,  ";
                 return true;
 
             } else if (event.getAction() == MotionEvent.ACTION_DOWN) {
@@ -471,7 +471,7 @@ public class MainActivity extends ActionBarActivity implements View.OnClickListe
                     return true;
                 }
                 // siia kirjuta see, mis juhtub kui näpp võetakse nupu pealt ära
-                MenuActivity.combo = MenuActivity.combo + "right lowkick,  ";
+                MenuActivity.combo = MenuActivity.combo + "Right lowkick,  ";
                 return true;
 
             } else if (event.getAction() == MotionEvent.ACTION_DOWN) {
@@ -490,7 +490,7 @@ public class MainActivity extends ActionBarActivity implements View.OnClickListe
                     return true;
                 }
                 // siia kirjuta see, mis juhtub kui näpp võetakse nupu pealt ära
-                MenuActivity.combo = MenuActivity.combo + "left middlekick,  ";
+                MenuActivity.combo = MenuActivity.combo + "Left middlekick,  ";
                 return true;
 
             } else if (event.getAction() == MotionEvent.ACTION_DOWN) {
@@ -509,7 +509,7 @@ public class MainActivity extends ActionBarActivity implements View.OnClickListe
                     return true;
                 }
                 // siia kirjuta see, mis juhtub kui näpp võetakse nupu pealt ära
-                MenuActivity.combo = MenuActivity.combo + "right middlekick,  ";
+                MenuActivity.combo = MenuActivity.combo + "Right middlekick,  ";
                 return true;
 
             } else if (event.getAction() == MotionEvent.ACTION_DOWN) {
@@ -528,7 +528,7 @@ public class MainActivity extends ActionBarActivity implements View.OnClickListe
                     return true;
                 }
                 // siia kirjuta see, mis juhtub kui näpp võetakse nupu pealt ära
-                MenuActivity.combo = MenuActivity.combo + "left highkick,  ";
+                MenuActivity.combo = MenuActivity.combo + "Left highkick,  ";
                 return true;
 
             } else if (event.getAction() == MotionEvent.ACTION_DOWN) {
@@ -547,7 +547,7 @@ public class MainActivity extends ActionBarActivity implements View.OnClickListe
                     return true;
                 }
                 // siia kirjuta see, mis juhtub kui näpp võetakse nupu pealt ära
-                MenuActivity.combo = MenuActivity.combo + "right highkick,  ";
+                MenuActivity.combo = MenuActivity.combo + "Right highkick,  ";
                 return true;
 
             } else if (event.getAction() == MotionEvent.ACTION_DOWN) {
@@ -569,7 +569,7 @@ public class MainActivity extends ActionBarActivity implements View.OnClickListe
                 textview_1.setText(MenuActivity.combo);
                 if(MenuActivity.combo != ""){
                     MenuActivity.savedComboCounter = MenuActivity.savedComboCounter + 1;
-                    MenuActivity.savedCombo = MenuActivity.savedCombo + "Combo nr "
+                    MenuActivity.savedCombo = MenuActivity.savedCombo + " "
                             + MenuActivity.savedComboCounter + ": \n"
                             + MenuActivity.combo.substring(0, MenuActivity.combo.length()-3) + "\n\n";
                     MenuActivity.combo = "";
@@ -596,7 +596,7 @@ public class MainActivity extends ActionBarActivity implements View.OnClickListe
                     return true;
                 }
                 // siia kirjuta see, mis juhtub kui näpp võetakse nupu pealt ära
-                MenuActivity.combo = MenuActivity.combo + "left straight to the body,  ";
+                MenuActivity.combo = MenuActivity.combo + "Left straight to the body,  ";
                 return true;
 
             } else if (event.getAction() == MotionEvent.ACTION_DOWN) {
@@ -615,7 +615,7 @@ public class MainActivity extends ActionBarActivity implements View.OnClickListe
                     return true;
                 }
                 // siia kirjuta see, mis juhtub kui näpp võetakse nupu pealt ära
-                MenuActivity.combo = MenuActivity.combo + "left knee,  ";
+                MenuActivity.combo = MenuActivity.combo + "Left knee,  ";
                 return true;
 
             } else if (event.getAction() == MotionEvent.ACTION_DOWN) {
@@ -634,7 +634,7 @@ public class MainActivity extends ActionBarActivity implements View.OnClickListe
                     return true;
                 }
                 // siia kirjuta see, mis juhtub kui näpp võetakse nupu pealt ära
-                MenuActivity.combo = MenuActivity.combo + "right knee,  ";
+                MenuActivity.combo = MenuActivity.combo + "Right knee,  ";
                 return true;
 
             } else if (event.getAction() == MotionEvent.ACTION_DOWN) {

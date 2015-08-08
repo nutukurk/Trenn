@@ -43,7 +43,7 @@ View.OnTouchListener{
         image_button_3.setImageDrawable(getResources().getDrawable(R.drawable.options));
 
         menu_background = (ImageView) findViewById(R.id.menu_background);
-        menu_background.setImageDrawable(getResources().getDrawable(R.drawable.teine_background));
+        menu_background.setImageDrawable(getResources().getDrawable(R.drawable.proov2));
 
         editor = getSharedPreferences(PREFS_NAME, MODE_PRIVATE).edit();
 

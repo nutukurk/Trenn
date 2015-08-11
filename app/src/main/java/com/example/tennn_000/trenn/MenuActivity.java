@@ -118,6 +118,9 @@ View.OnTouchListener{
                 if (rect != null && !rect.contains(v.getLeft() + (int) event.getX(), v.getTop() + (int) event.getY())) {
                     return true;
                 }
+                MenuActivity.editor.putString("combos", "");
+
+                MenuActivity.editor.commit();
                 //Intent intent = new Intent(this, MainActivity.class);
                 //startActivity(intent);
                 return true;

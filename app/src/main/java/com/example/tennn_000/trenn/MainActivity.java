@@ -567,11 +567,12 @@ public class MainActivity extends ActionBarActivity implements View.OnClickListe
                 }
                 // siia kirjuta see, mis juhtub kui näpp võetakse nupu pealt ära
                 textview_1.setText(MenuActivity.combo);
-                if(MenuActivity.combo != ""){
+
+                if(!MenuActivity.combo.equals("")){
                     MenuActivity.savedComboCounter = MenuActivity.savedComboCounter + 1;
-                    MenuActivity.savedCombo = MenuActivity.savedCombo + " "
-                            + MenuActivity.savedComboCounter + ": \n"
-                            + MenuActivity.combo.substring(0, MenuActivity.combo.length()-3) + "\n\n";
+
+                    MenuActivity.savedCombo = MenuActivity.savedCombo
+                            + MenuActivity.combo.substring(0, MenuActivity.combo.length()-3) + "split";
                     MenuActivity.combo = "";
 
                     MenuActivity.editor.putString("combos", MenuActivity.savedCombo);

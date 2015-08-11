@@ -2,11 +2,11 @@
     xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
     android:layout_height="match_parent" >
 
-    <ImageView
-        android:id="@+id/result_combos_background"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:scaleType="fitXY"/>
+    <!--<ImageView-->
+        <!--android:id="@+id/result_combos_background"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent"-->
+        <!--android:scaleType="fitXY"/>-->
     <ImageView
         android:id="@+id/create_combos_backgroundtwo"
         android:layout_width="fill_parent"
@@ -17,21 +17,31 @@
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true" />
 
+    <!--<LinearLayout-->
+        <!--android:id="@+id/result_combos_linear_layout"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent"-->
+        <!--android:orientation="vertical">-->
+
+    <!--</LinearLayout>-->
+
 
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
         <LinearLayout
+            android:id="@+id/result_combos_linear_layout"
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            android:orientation="vertical">
 
-            <TextView
-                android:id="@+id/result_text"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textColor="#ffffff"
-                android:textSize="24dp" />
+            <!--<TextView-->
+                <!--android:id="@+id/result_text"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:textColor="#ffffff"-->
+                <!--android:textSize="24dp" />-->
         </LinearLayout>
     </ScrollView>
 
